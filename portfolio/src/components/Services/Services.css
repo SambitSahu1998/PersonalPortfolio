@@ -1,0 +1,131 @@
+.services{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:80px;
+    margin:40px 100px;
+}
+
+.services-title{
+    position:relative;
+}
+
+.services-title h2{
+    padding:0px 20px;
+    font-size: 70px;
+    font-weight:600;
+}
+
+.services-title img{
+    width:230px;
+    height:55px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:-1;
+}
+
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    padding:30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 4s;
+    cursor: pointer;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+    margin-bottom: 60px;
+}
+
+.services-format h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.services-format h3{
+    font-size: 30px;
+    font-weight: 800;
+    background:linear-gradient(270deg, #DF8908 50% , #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-format p{
+    color:#d4d4d4;
+    font-size:20px;
+    line-height: 35px;
+    max-width:300px;
+}
+
+.services-readmore{
+    display:flex;
+    gap:16px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.services-rightIcons{
+    width:25px;
+}
+
+.services-format:hover{
+    border:2px solid #FF00FF;
+    background-image: linear-gradient(45deg, #3F0028,#582300);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+@media(max-width:768px){
+    .services{
+        align-items: start;
+        gap:50px;
+        margin:20px 60px;
+    }
+
+    .services-title h2{
+        font-size: 46px;
+        padding:0;
+    }
+    
+    .services-title img{
+        width:100px;
+        height:30px;
+        bottom:0;
+        right:-6px;
+    }
+
+    .services-format{
+        gap:18px;
+        padding:26px;
+    }
+
+    .services-format h3{
+        font-size:25px
+    }
+
+    .services-format p{
+        font-size:18px;
+        line-height:32px;
+        max-width:250px;
+    }   
+
+    .services-rightIcons{
+        width:18px;
+    }
+
+    .services-container{
+        grid-template-columns: 1fr 1fr;
+        gap:30px;
+    }
+
+    
+}
