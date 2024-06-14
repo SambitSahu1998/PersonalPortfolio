@@ -9,7 +9,7 @@ import Services from './components/Services/Services';
 
 function App() {
   return (
-    <div>
+    <div className='scrollable-content'>
       <Navbar/>
       <Hero/>
       <About/>

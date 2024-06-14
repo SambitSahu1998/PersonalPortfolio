@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.css";
 import footerLogo from '../../assets/newLogo.png';
 import userInput from '../../assets/user.png';
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 const Footer = () => {
   return (
@@ -29,7 +31,7 @@ const Footer = () => {
         <div className="footer-bottom-right">
             <p>Term of Service</p>
             <p>Privacy Policy</p>
-            <p>Connect with me</p>
+            <p><AnchorLink className="anchor-link" offset={50} href="#contact">Connect with me</AnchorLink></p>
         </div>
       </div>
     </div>
