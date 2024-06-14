@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import footerLogo from '../../assets/newLogo.png';
 import userInput from '../../assets/user.png';
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import {useSnackbar} from "notistack";
 
 const Footer = () => {
+  const {enqueueSnackbar} = useSnackbar();
+  const [email,setEmail] = useState("");
+
+  const handleInputChange = (e) =>{
+    setEmail(e.target.value);
+  }
+
+  const handleSubscribe = async () => {
+    if (!email || !email.includes("@")) {
+      enqueueSnackbar("Please enter a valid email address.", { variant: "error" });
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("message", "New subscriber");
+      formData.append("access_key", "c7801a6e-86f2-4280-bf98-1e2a6a704aeb");
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
+
+      if (res.success) {
+        enqueueSnackbar("Subscribed successfully!", { variant: "success" });
+        setEmail("");
+      } else {
+        enqueueSnackbar(res.message, { variant: "error" });
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      enqueueSnackbar("Failed to subscribe. Please try again later.", { variant: "error" });
+    }
+  };
+
   return (
     <div className="footer">
       <div className="footer-top">
@@ -16,9 +58,9 @@ const Footer = () => {
         <div className="footer-top-right">
             <div className="footer-email-input">
                 <img src={userInput} alt=""/>
-                <input type="email" placeholder="Enter Your Email"/>
+                <input type="email" placeholder="Enter Your Email" value={email} onChange={handleInputChange}/>
             </div>
-            <div className="footer-subscribe">
+            <div className="footer-subscribe" onClick={handleSubscribe}>
                 Subscribe
             </div>
         </div>
