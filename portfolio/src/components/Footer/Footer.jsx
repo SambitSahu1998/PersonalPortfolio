@@ -71,8 +71,8 @@ const Footer = () => {
             © 2024 Sambit Kumar Sahu. All rights reserved.
         </p>
         <div className="footer-bottom-right">
-            <p>Term of Service</p>
-            <p>Privacy Policy</p>
+            <p><a href="https://www.termsfeed.com/live/daac35bd-18c2-43c6-abe4-f53ad8d6ca12/" target="_blank" rel="noopener noreferrer">Term of Service</a></p>
+            <p><a href="https://www.termsfeed.com/live/2f3bb83b-6250-482f-b716-bdfacc2c6959/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
             <p><AnchorLink className="anchor-link" offset={50} href="#contact">Connect with me</AnchorLink></p>
         </div>
       </div>

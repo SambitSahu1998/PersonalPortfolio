@@ -92,6 +92,7 @@
     align-items: center;
     gap:10px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .about-achievement h2{

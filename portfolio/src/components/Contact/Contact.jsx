@@ -4,6 +4,7 @@ import SambitLogo from "../../assets/SambitLogo.png";
 import phoneIcons from "../../assets/phone.png";
 import emailIcons from "../../assets/email.png";
 import locationIcons from "../../assets/location.png";
+import linkedInIcons from "../../assets/linkedIn.png";
 import {useSnackbar} from "notistack";
 
 const Contact = () => {
@@ -73,6 +74,10 @@ const Contact = () => {
             <div className="contact-detail">
               <img src={locationIcons} alt="" />
               <p>Pune, Republic of India</p>
+            </div>
+            <div className="contact-detail">
+              <img src={linkedInIcons} alt="" />
+              <p>linkedin.com/in/sambitkumarsahuofficial/</p>
             </div>
           </div>
         </div>
