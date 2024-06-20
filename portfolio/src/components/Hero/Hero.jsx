@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         <div className="hero-resume">
           <a
-            href="https://drive.usercontent.google.com/u/0/uc?id=1G1Ql8ucUwizXzukIBJizQEkkwogOaJ3-&export=download"
+            href="https://drive.google.com/file/d/1q5isN6zAImgjmfCsG1ML2NWCTYcd2BdG/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "inherit" }}
